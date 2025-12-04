@@ -1,1 +1,1119 @@
-hhhh
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Veronica Velazquez | CV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Curriculum Vitae of Veronica Velazquez – PhD Researcher, Medical Doctor, and Data Analyst." />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-elevated: #0b1020;
+      --accent: #6ee7b7;
+      --accent-soft: rgba(110, 231, 183, 0.08);
+      --accent-strong: #22c55e;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border-subtle: rgba(148, 163, 184, 0.5);
+      --chip-bg: rgba(148, 163, 184, 0.1);
+      --danger: #f97373;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.75);
+      --radius-lg: 18px;
+      --radius-xl: 26px;
+      --transition-fast: 180ms ease-out;
+      --transition-med: 240ms ease-out;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #101827 0, #050816 42%, #020617 100%);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page-shell {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 3.5rem;
+    }
+
+    /* Top Nav */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(to bottom, rgba(5, 8, 22, 0.92), rgba(5, 8, 22, 0.65), transparent);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+    }
+
+    .nav-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.65rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 600;
+      font-size: 0.98rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .brand-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 0%, #a7f3d0, #22c55e);
+      box-shadow: 0 0 16px rgba(34, 197, 94, 0.9);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 0.1rem;
+      cursor: pointer;
+      transition: color var(--transition-fast);
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.15rem;
+      width: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(to right, var(--accent), var(--accent-strong));
+      transition: width var(--transition-fast);
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2.5rem;
+      align-items: center;
+      padding-top: 2.5rem;
+    }
+
+    .badge-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.22rem 0.55rem 0.22rem 0.3rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      color: var(--muted);
+      background: radial-gradient(circle at top left, rgba(110, 231, 183, 0.18), rgba(15, 23, 42, 0.85));
+      border: 1px solid rgba(148, 163, 184, 0.65);
+      margin-bottom: 1.1rem;
+    }
+
+    .badge-pill {
+      padding: 0.22rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 10px rgba(110, 231, 183, 0.9);
+    }
+
+    .hero-title {
+      font-size: clamp(2.3rem, 4vw, 2.9rem);
+      line-height: 1.1;
+      margin-bottom: 0.7rem;
+      font-weight: 700;
+    }
+
+    .hero-title span {
+      background: linear-gradient(to right, #6ee7b7, #22c55e, #a5b4fc);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1.02rem;
+      color: var(--muted);
+      max-width: 36rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .hero-tag {
+      padding: 0.22rem 0.68rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: rgba(15, 23, 42, 0.7);
+      color: var(--muted);
+      backdrop-filter: blur(6px);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .btn {
+      border-radius: 999px;
+      padding: 0.65rem 1.3rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: background var(--transition-med), transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+      background: transparent;
+      color: var(--text);
+    }
+
+    .btn-primary {
+      background: radial-gradient(circle at top left, #a7f3d0, #22c55e);
+      color: #020617;
+      box-shadow: 0 18px 35px rgba(16, 185, 129, 0.65);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px) scale(1.01);
+      box-shadow: 0 20px 40px rgba(16, 185, 129, 0.9);
+    }
+
+    .btn-ghost {
+      border-color: rgba(148, 163, 184, 0.8);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      background: radial-gradient(circle at top, rgba(110, 231, 183, 0.12), rgba(15, 23, 42, 1));
+      transform: translateY(-1px);
+    }
+
+    .btn span.icon {
+      font-size: 1rem;
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .hero-note-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 8px rgba(34, 197, 94, 0.9);
+    }
+
+    .hero-photo-wrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .photo-card {
+      position: relative;
+      border-radius: var(--radius-xl);
+      padding: 0.6rem;
+      background:
+        radial-gradient(circle at top left, rgba(110, 231, 183, 0.22), transparent),
+        radial-gradient(circle at bottom right, rgba(129, 140, 248, 0.25), rgba(15, 23, 42, 1));
+      box-shadow: var(--shadow-soft);
+      max-width: 360px;
+      width: 100%;
+    }
+
+    .photo-inner {
+      border-radius: calc(var(--radius-xl) - 8px);
+      overflow: hidden;
+      background: #020617;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      position: relative;
+    }
+
+    .photo-inner img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      filter: saturate(1.1) contrast(1.02);
+      transform: scale(1.02);
+      transition: transform 6s ease-out;
+    }
+
+    .photo-card:hover img {
+      transform: scale(1.06);
+    }
+
+    .photo-glow {
+      position: absolute;
+      inset: -16%;
+      pointer-events: none;
+      background: radial-gradient(circle at 10% 0%, rgba(110, 231, 183, 0.18), transparent 50%),
+                  radial-gradient(circle at 90% 100%, rgba(129, 140, 248, 0.2), transparent 55%);
+      opacity: 0.8;
+      mix-blend-mode: screen;
+    }
+
+    .floating-chip {
+      position: absolute;
+      right: -0.1rem;
+      bottom: 0.9rem;
+      padding: 0.45rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.94);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      display: flex;
+      flex-direction: column;
+      gap: 0.08rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      backdrop-filter: blur(10px);
+      max-width: 190px;
+    }
+
+    .floating-chip strong {
+      color: var(--accent);
+      font-size: 0.76rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* Sections */
+    section {
+      margin-top: 3.5rem;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .section-title span.accent {
+      width: 28px;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(to right, var(--accent), var(--accent-strong));
+    }
+
+    .section-kicker {
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: right;
+    }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 1.8rem;
+    }
+
+    .card {
+      background: radial-gradient(circle at top left, rgba(148, 163, 184, 0.18), rgba(15, 23, 42, 0.94));
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      padding: 1.15rem 1.2rem;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    .card p {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.6rem;
+    }
+
+    .pill {
+      padding: 0.18rem 0.65rem;
+      border-radius: 999px;
+      background: var(--chip-bg);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    /* Experience / Education */
+    .timeline {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 1.8rem;
+    }
+
+    .timeline-column h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+
+    .timeline-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .timeline-item {
+      padding: 0.75rem 0.9rem;
+      border-radius: 14px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .timeline-main {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-role {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .timeline-place {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .timeline-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.8rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .timeline-pill {
+      font-size: 0.75rem;
+      padding: 0.1rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 1);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+    }
+
+    .timeline-item p {
+      margin-top: 0.4rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .skills-category h4 {
+      font-size: 0.9rem;
+      margin-bottom: 0.45rem;
+      color: var(--text);
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .skills-list span {
+      font-size: 0.78rem;
+      padding: 0.18rem 0.6rem;
+      border-radius: 999px;
+      background: var(--chip-bg);
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      color: var(--muted);
+    }
+
+    /* Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .project-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      background: radial-gradient(circle at top, rgba(110, 231, 183, 0.06), rgba(15, 23, 42, 0.98));
+      padding: 1rem 1.05rem 1.05rem;
+      overflow: hidden;
+    }
+
+    .project-chip {
+      font-size: 0.72rem;
+      padding: 0.12rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .project-title {
+      font-size: 0.95rem;
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+
+    .project-card p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+    }
+
+    .project-meta span {
+      padding: 0.1rem 0.5rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+    }
+
+    /* Contact */
+    .contact-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.95fr);
+      gap: 1.6rem;
+      align-items: center;
+    }
+
+    .contact-main p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.9rem;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.86rem;
+    }
+
+    .contact-link {
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.65);
+      background: rgba(15, 23, 42, 0.95);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--muted);
+      transition: border-color var(--transition-fast), transform var(--transition-fast), background var(--transition-fast);
+    }
+
+    .contact-link:hover {
+      border-color: var(--accent);
+      transform: translateY(-1px);
+      background: radial-gradient(circle at top, rgba(110, 231, 183, 0.08), rgba(15, 23, 42, 0.98));
+      color: var(--text);
+    }
+
+    .contact-highlight {
+      padding: 0.85rem 1rem;
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at top left, rgba(110, 231, 183, 0.15), rgba(15, 23, 42, 1));
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .contact-highlight strong {
+      color: var(--accent);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(148, 163, 184, 0.4);
+      padding: 1.1rem 1.25rem 1.6rem;
+      margin-top: auto;
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    footer span {
+      color: var(--accent);
+    }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-photo-wrap {
+        order: -1;
+      }
+      .timeline,
+      .about-grid,
+      .contact-card,
+      .projects-grid,
+      .skills-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-inner {
+        padding-inline: 1rem;
+      }
+      .container {
+        padding-inline: 1rem;
+      }
+      .nav-links {
+        display: none;
+      }
+      .hero {
+        padding-top: 1.6rem;
+      }
+      section {
+        margin-top: 3rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .photo-card {
+        max-width: 290px;
+      }
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <!-- Navigation -->
+    <header class="nav">
+      <div class="nav-inner">
+        <div class="brand">
+          <div class="brand-dot"></div>
+          <span>Veronica&nbsp;Velazquez</span>
+        </div>
+        <nav class="nav-links">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Hero -->
+      <section class="hero" id="top">
+        <div>
+          <div class="badge-row">
+            <div class="badge-pill">
+              <span class="badge-dot"></span>
+              <span>Sleep · Performance · Data</span>
+            </div>
+            <span>PhD · MD</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I’m <span>Veronica Velazquez</span>
+          </h1>
+          <p class="hero-subtitle">
+            Medical doctor turned data-driven performance scientist. I blend
+            <strong>sleep &amp; circadian science</strong>, <strong>elite sport</strong>, and
+            <strong>analytics</strong> to help athletes and teams make smarter decisions on and off the pitch.
+          </p>
+
+          <div class="hero-tags">
+            <div class="hero-tag">PhD · Sleep &amp; Circadian Rhythms in Elite Sport</div>
+            <div class="hero-tag">MD · Clinical &amp; Research Background</div>
+            <div class="hero-tag">Data Analytics · Python, SQL, Power BI</div>
+            <div class="hero-tag">High-performance environments · Football &amp; Motorsport</div>
+          </div>
+
+          <div class="hero-actions">
+            <!-- Replace href with your actual CV file if needed -->
+            <a class="btn btn-primary" href="#" download>
+              <span class="icon">⬇️</span>
+              <span>Download CV</span>
+            </a>
+            <a class="btn btn-ghost" href="#contact">
+              <span class="icon">✉️</span>
+              <span>Let’s work together</span>
+            </a>
+          </div>
+
+          <div class="hero-note">
+            <div class="hero-note-dot"></div>
+            <span>Currently exploring sleep–performance models in elite football (and dreaming of F1).</span>
+          </div>
+        </div>
+
+        <div class="hero-photo-wrap">
+          <div class="photo-card">
+            <div class="photo-inner">
+              <img
+                src="https://raw.githubusercontent.com/VeronicaVelazquez/PracticeUSFirstRepo/refs/heads/main/mypic.png?token=GHSAT0AAAAAADQTSUETVADWRN55UDTZ56EQ2JRNVNA"
+                alt="Portrait of Veronica Velazquez"
+              />
+              <div class="photo-glow"></div>
+            </div>
+            <div class="floating-chip">
+              <strong>PhD &amp; MD</strong>
+              <span>Clinical mindset. Data brain. Obsessed with how sleep shapes performance.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="accent"></span>
+            About
+          </h2>
+          <p class="section-kicker">Curious, analytical, and slightly obsessed with details.</p>
+        </div>
+
+        <div class="about-grid">
+          <article class="card">
+            <h3>Who I am</h3>
+            <p>
+              I’m Veronica, a <strong>PhD researcher</strong> with a background as a
+              <strong>medical doctor</strong> and <strong>data analyst</strong>. I love turning messy
+              real-world datasets into clear stories that athletes, coaches, and decision-makers can actually use.
+            </p>
+            <p style="margin-top: 0.55rem;">
+              My work sits at the intersection of <strong>sleep &amp; circadian rhythms</strong>,
+              <strong>elite performance</strong>, and <strong>applied analytics</strong> — from wearables and GPS
+              data to readiness models and injury risk.
+            </p>
+            <div class="pill-row">
+              <span class="pill">Evidence-based</span>
+              <span class="pill">Athlete-centred</span>
+              <span class="pill">Systems thinker</span>
+              <span class="pill">Calm under pressure</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>How I work</h3>
+            <p>
+              I balance <strong>scientific rigour</strong> with <strong>applied impact</strong>:
+              collaborative with staff, clear with communication, and always focused on what actually helps people
+              perform and recover better.
+            </p>
+            <p style="margin-top: 0.55rem;">
+              I enjoy bridging worlds — medical, academic, and high-performance environments — and
+              translating complex analysis into simple, intuitive visuals and recommendations.
+            </p>
+            <div class="pill-row">
+              <span class="pill">Stakeholder-friendly dashboards</span>
+              <span class="pill">Translating science into practice</span>
+              <span class="pill">Long-term athlete health</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Experience & Education -->
+      <section id="experience">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="accent"></span>
+            Experience &amp; Education
+          </h2>
+          <p class="section-kicker">A medical foundation, strengthened by data and sport performance.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Experience -->
+          <div class="timeline-column">
+            <h3>Experience</h3>
+            <div class="timeline-list">
+              <article class="timeline-item">
+                <div class="timeline-main">
+                  <div>
+                    <div class="timeline-role">PhD Researcher – Sleep &amp; Performance</div>
+                    <div class="timeline-place">University of Sussex · Elite Football Collaboration</div>
+                  </div>
+                  <div class="timeline-meta">
+                    <span>2025 – Present</span>
+                  </div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-pill">Sleep &amp; circadian rhythms</span>
+                  <span class="timeline-pill">GPS &amp; load monitoring</span>
+                  <span class="timeline-pill">Readiness modelling</span>
+                </div>
+                <p>
+                  Developing multi-metric models linking sleep, training load, biomarkers, and football performance
+                  to support smarter decisions and reduce days lost to soft-tissue injury.
+                </p>
+              </article>
+
+              <article class="timeline-item">
+                <div class="timeline-main">
+                  <div>
+                    <div class="timeline-role">Medical Doctor &amp; Clinical Roles</div>
+                    <div class="timeline-place">Hospitals &amp; Clinical Practice</div>
+                  </div>
+                  <div class="timeline-meta">
+                    <span>Clinical background</span>
+                  </div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-pill">Emergency &amp; acute care</span>
+                  <span class="timeline-pill">Patient-centred decision-making</span>
+                </div>
+                <p>
+                  Built solid clinical reasoning, risk management, and communication skills in high-pressure
+                  environments while staying grounded in patient safety and ethics.
+                </p>
+              </article>
+
+              <article class="timeline-item">
+                <div class="timeline-main">
+                  <div>
+                    <div class="timeline-role">Data &amp; Operations Roles</div>
+                    <div class="timeline-place">Education &amp; Healthcare Settings</div>
+                  </div>
+                  <div class="timeline-meta">
+                    <span>Process &amp; performance</span>
+                  </div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-pill">SQL · Python</span>
+                  <span class="timeline-pill">Power BI · Tableau</span>
+                  <span class="timeline-pill">Process optimisation</span>
+                </div>
+                <p>
+                  Used data to streamline systems, improve service quality, and support teams with dashboards,
+                  reporting, and clear insights.
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="timeline-column" id="education">
+            <h3>Education</h3>
+            <div class="timeline-list">
+              <article class="timeline-item">
+                <div class="timeline-main">
+                  <div>
+                    <div class="timeline-role">PhD – Sleep &amp; Circadian Rhythms in Elite Sport</div>
+                    <div class="timeline-place">University of Sussex</div>
+                  </div>
+                  <div class="timeline-meta">
+                    <span>PhD</span>
+                  </div>
+                </div>
+                <p>
+                  Focused on sleep variability, match demands, travel, and long-term adaptation in elite football,
+                  integrating data from wearables, GPS, and biomarkers.
+                </p>
+              </article>
+
+              <article class="timeline-item">
+                <div class="timeline-main">
+                  <div>
+                    <div class="timeline-role">Medical Doctor (MD)</div>
+                    <div class="timeline-place">Medical School</div>
+                  </div>
+                  <div class="timeline-meta">
+                    <span>MD</span>
+                  </div>
+                </div>
+                <p>
+                  Foundation in anatomy, physiology, clinical reasoning, and evidence-based practice, with a strong
+                  interest in sports medicine and rehabilitation.
+                </p>
+              </article>
+
+              <article class="timeline-item">
+                <div class="timeline-main">
+                  <div>
+                    <div class="timeline-role">Additional Training</div>
+                    <div class="timeline-place">Data &amp; Analytics · Research Methods</div>
+                  </div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-pill">Data analytics</span>
+                  <span class="timeline-pill">Research design</span>
+                  <span class="timeline-pill">Statistics &amp; reporting</span>
+                </div>
+                <p>
+                  Advanced skills in Python, SQL, dashboarding, and scientific communication to bridge research and
+                  real-world decision-making.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="accent"></span>
+            Skills
+          </h2>
+          <p class="section-kicker">A blend of medical insight, analytics, and high-performance thinking.</p>
+        </div>
+
+        <div class="card">
+          <div class="skills-grid">
+            <div class="skills-category">
+              <h4>Analytics &amp; Tools</h4>
+              <div class="skills-list">
+                <span>Python</span>
+                <span>SQL</span>
+                <span>Power BI</span>
+                <span>Tableau</span>
+                <span>Looker Studio</span>
+                <span>Excel (advanced)</span>
+              </div>
+            </div>
+
+            <div class="skills-category">
+              <h4>Sport &amp; Performance</h4>
+              <div class="skills-list">
+                <span>Sleep &amp; circadian rhythms</span>
+                <span>Wearable data</span>
+                <span>GPS &amp; match load</span>
+                <span>Readiness &amp; recovery</span>
+                <span>Injury risk factors</span>
+              </div>
+            </div>
+
+            <div class="skills-category">
+              <h4>Medical &amp; Research</h4>
+              <div class="skills-list">
+                <span>Clinical reasoning</span>
+                <span>Evidence appraisal</span>
+                <span>Study design</span>
+                <span>Scientific writing</span>
+                <span>Communication with stakeholders</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects / Focus Areas -->
+      <section id="projects">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="accent"></span>
+            Focus Areas
+          </h2>
+          <p class="section-kicker">Where my curiosity and skillset naturally converge.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-chip">
+              <span>⚽</span>
+              <span>Elite Football</span>
+            </div>
+            <div class="project-title">Sleep, Load &amp; Readiness Model</div>
+            <p>
+              Integrating sleep metrics, GPS data, and neuromuscular markers to better understand day-to-day
+              readiness and long-term adaptation across a busy season.
+            </p>
+            <div class="project-meta">
+              <span>Sleep variability</span>
+              <span>HSR &amp; accelerations</span>
+              <span>Time-to-restore CMJ</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-chip">
+              <span>🌍</span>
+              <span>Context &amp; Travel</span>
+            </div>
+            <div class="project-title">Circadian Disruption &amp; Scheduling</div>
+            <p>
+              Exploring how kick-off times, travel, and congestion interact with sleep and performance, and what
+              practical strategies can reduce their impact.
+            </p>
+            <div class="project-meta">
+              <span>Chronotype &amp; timing</span>
+              <span>Fixture congestion</span>
+              <span>Travel demands</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="accent"></span>
+            Contact
+          </h2>
+          <p class="section-kicker">Let’s talk performance, sleep, or data (or all three).</p>
+        </div>
+
+        <div class="card contact-card">
+          <div class="contact-main">
+            <p>
+              I’m always open to conversations around <strong>elite sport</strong>, <strong>sleep &amp; recovery</strong>,
+              and <strong>data-driven performance projects</strong> — especially where science needs to fit messy,
+              real-world constraints.
+            </p>
+            <div class="contact-links">
+              <!-- Replace with your real email / LinkedIn / GitHub as needed -->
+              <a class="contact-link" href="mailto:your.email@example.com">
+                <span>📧</span>
+                <span>Email</span>
+              </a>
+              <a class="contact-link" href="#" target="_blank" rel="noreferrer">
+                <span>🔗</span>
+                <span>LinkedIn</span>
+              </a>
+              <a class="contact-link" href="#" target="_blank" rel="noreferrer">
+                <span>📊</span>
+                <span>GitHub / Portfolio</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-highlight">
+            <p>
+              <strong>How I can help:</strong><br />
+              • Translate complex data into clear dashboards and stories.<br />
+              • Build or critique readiness &amp; recovery frameworks.<br />
+              • Connect clinical, research, and performance perspectives in one conversation.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        Crafted for <span>Veronica Velazquez</span> · PhD · MD · Data &amp; Performance.
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
